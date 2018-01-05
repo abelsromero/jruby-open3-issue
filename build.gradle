@@ -1,0 +1,11 @@
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile group: 'org.jruby', name: 'jruby-complete', version: '9.1.15.0'
+    compile group: 'commons-io', name: 'commons-io', version: '2.6'
+//    compile group: 'org.asciidoctor', name: 'asciidoctorj', version: '1.5.6'
+}
