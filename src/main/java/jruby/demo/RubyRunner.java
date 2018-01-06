@@ -48,9 +48,7 @@ public class RubyRunner {
         File execFile = new File(basePath, "files/kindlegen.exe");
         assert execFile.exists();
 
-        final Map<String, String> envVars = new HashMap<String, String>() {{
-            put("KINDLEGEN", execFile.getAbsolutePath());
-        }};
+        final Map<String, String> envVars = new HashMap<>();
 
         final RubyInstanceConfig config = createOptimizedConfiguration();
         injectEnvironmentVariables(config, envVars);

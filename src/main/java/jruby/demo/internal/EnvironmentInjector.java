@@ -16,7 +16,7 @@ public class EnvironmentInjector {
     }
 
     public void inject(Map<String, String> environmentVars) {
-        if (!environmentVars.isEmpty()) {
+        // if (!environmentVars.isEmpty()) {
             Map<String, String> replacementEnv = new HashMap<>(System.getenv());
             for (Map.Entry<String, String> envVar : environmentVars.entrySet()) {
                 String key = envVar.getKey();
@@ -37,7 +37,7 @@ public class EnvironmentInjector {
 
             }
             config.setEnvironment(replacementEnv);
-        }
+       // }
     }
 
 }
