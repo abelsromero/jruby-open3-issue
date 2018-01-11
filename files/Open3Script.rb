@@ -11,7 +11,8 @@ def is_mac?
 end
 
 def is_windows?
-    RbConfig::CONFIG['target_os'].downcase.include?("mswin")
+    target_os = RbConfig::CONFIG['target_os'].downcase
+    target_os == 'mingw32' || target_os.include?("mswin")
 end
 
 if ENV['KINDLEGEN']
